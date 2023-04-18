@@ -1,0 +1,5 @@
+.invisible-element
+{
+    display: none;
+    visibility: hidden;
+}
