@@ -1,8 +1,7 @@
 
 <?php
 
-session_start();
-
+require_once "session.php";
 require_once "database.php";
 include "cookie.php";
 
@@ -12,10 +11,37 @@ class Logger
 {
     public static function LoginWithReminder($email, $password)
     {
-        Cookie::Set('user-email', $email);
-        Cookie::Set('user-password', $password);
+        global $db;
 
-        return Logger::LoadUser();
+        Logger::Logout();
+
+        
+        $user = $db->Get('user', 'email', $email);
+        if ($user != NULL && password_verify($password, $user['password']))
+        {
+            Session::SetUser($user);
+            Cookie::Set('user-email', $email);
+            Cookie::Set('user-password', $password);
+            return true;
+        }
+        return false;
+    }
+
+    public static function LoginWithoutReminder($email, $password)
+    {
+        global $db;
+
+        Logger::Logout();
+
+        $user = $db->Get('user', 'email', $email);
+        if ($user != NULL && password_verify($password, $user['password']))
+        {
+            echo "It's working!";
+
+            Session::SetUser($user);
+            return true;
+        }
+        return false;
     }
 
     public static function GetUser()
@@ -38,10 +64,22 @@ class Logger
         return Logger::GetUser() != NULL;
     }
 
+    public static function IsAdmin()
+    {
+        global $db;
+
+        $user = Logger::GetUser();
+        if ($user == NULL)
+            return false;
+        $db_user = $db->Get('user', 'email', $user['email']);
+        if ($db_user != NULL && $db_user['admin'] == 1)
+            return true;
+        return false;
+    }
+
     public static function Logout()
     {
-        session_unset();
-        session_destroy();
+        Session::Destroy();
 
         Cookie::Delete('user-email');
         Cookie::Delete('user-password');
@@ -59,15 +97,13 @@ class Logger
 
             if ($user != NULL && password_verify($password, $user['password']))
             {
-                $_SESSION['user-lastname'] = $user['lastname'];
-                $_SESSION['user-firstname'] = $user['firstname'];
-                $_SESSION['user-email'] = $user['email'];
-                $_SESSION['user-phone'] = $user['phone'];
+                Session::SetUser($user);
                 return true;
             }
             else
             {
                 Cookie::Delete('user-email');
+                Cookie::Delete('user-password');
             }
         }
         return false;

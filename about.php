@@ -7,9 +7,8 @@ include "layout/head.php";
 	include "layout/navbar.php";
 	?>
 
-    <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
-
-      <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+    <section class="home-slider owl-carousel img" style="background-image: url(images/core/home-background.jpg);">
+      <div class="slider-item">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">

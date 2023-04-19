@@ -28,18 +28,26 @@ if (isset($_POST['register']))
     $db->Insert("user", "lastname, firstname, email, phone, password, admin",
     array($lastname, $firstname, $email, $phone, $password, 0));
 
+    $succes = false;
+
+    if (isset($_POST['remind-me']))
+        Logger::LoginWithReminder($_POST['email'], $_POST['password']);
+    else
+        Logger::LoginWithoutReminder($_POST['email'], $_POST['password']);
     header("Location:index.php");
 }
 else if (isset($_POST['login']))
 {
-    if (Logger::LoginWithReminder($_POST['email'], $_POST['password']))
-    {
-        header("Location:index.php");
-    }
+    $succes = false;
+
+    if (isset($_POST['remind-me']))
+        $succes = Logger::LoginWithReminder($_POST['email'], $_POST['password']);
     else
-    {
-        //header("Location:login.php?error=Email sau parolă invalidă!");
-    }
+        $succes = Logger::LoginWithoutReminder($_POST['email'], $_POST['password']);
+    if ($succes)
+        header("Location:index.php");
+    else
+        header("Location:login.php?error=Email sau parolă invalidă!");
 }
 
 ?>

@@ -31,9 +31,12 @@ class DataBase
         return $this->Get($table, $column, $value) != NULL;
     }
 
-    public function Get($table, $column, $value)
+    public function Get($table, $column = NULL, $value = NULL)
     {
-        $sql_command = "SELECT * FROM $table WHERE $column = '$value';";
+        if ($column == NULL || $value == NULL)
+            $sql_command = "SELECT * FROM $table;";
+        else
+            $sql_command = "SELECT * FROM $table WHERE $column = '$value';";
         $result = mysqli_query($this->connection, $sql_command) or die(mysqli_error($this->connection));
         if ($result->num_rows == 0)
             return NULL;

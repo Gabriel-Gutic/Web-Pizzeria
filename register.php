@@ -12,7 +12,7 @@ include "layout/head.php";
         
             <div class="row block-9">
 	            <div class="col-md-3"></div>
-                    <div class="col-md-6 ftco-animate">
+                    <div id="main-column" class="col-md-6 ftco-animate">
                         <?php
                         if (isset($_GET['error']))
                         {
@@ -21,41 +21,43 @@ include "layout/head.php";
                             echo "</div>";
                         }
                         ?>
-
-                        <form method="GET" action="register.php" class="invisible-element">
-                            <input name="error" type="text" value="">
-                        </form>
                         
-                        <h3>Register</h3>
-                        <form method="POST" action="user.php" class="contact-form">
+                        <h3 id="title">Înregistrare</h3>
+                        <form id="register-form" method="POST" action="user.php" class="contact-form">
                         	<div class="row">
                         		<div class="col-md-6">
 	                                <div class="form-group">
-	                                    <input name="lastname" type="text" class="form-control" placeholder="Nume*" required>
+	                                    <input name="lastname" id="lastname" type="text" class="form-control" placeholder="Nume*" required>
 	                                </div>
                                 </div>
                                 <div class="col-md-6">
 	                                <div class="form-group">
-	                                <input name="firstname" type="text" class="form-control" placeholder="Prenume*" required>
+	                                <input name="firstname" id="firstname" type="text" class="form-control" placeholder="Prenume*" required>
 	                                </div>
 	                            </div>
                             </div>
                             <div class="form-group">
-                                <input name="email" type="email" class="form-control" placeholder="Email*" required>
+                                <input name="email" id="email" type="email" class="form-control" placeholder="Email*" required>
                             </div>
                             <div class="form-group">
-                                <input name="phone" type="tel" class="form-control" placeholder="Telefon*" required>
+                                <input name="phone" id="phone" type="tel" class="form-control" placeholder="Telefon*" required>
                             </div>
                             <div class="form-group">
-                                <input name="password" type="password" class="form-control" placeholder="Parola*" required>
+                                <input name="password" id="password" type="password" class="form-control" placeholder="Parola*" required>
                             </div>
                             <div class="form-group">
-                                <input name="password-again" type="password" class="form-control" placeholder="Repeta Parola*" required>
+                                <input name="password-again" id="password-again" type="password" class="form-control" placeholder="Repeta Parola*" required>
                             </div>
-                            <div class="form-group">
-                                <input name="register" type="submit" value="Înregistrare" class="btn btn-primary py-3 px-5">
+                            <div class="form-check mb-4">
+                                <input name="remind-me" type="checkbox" class="form-check-input" id="remind-me">
+                                <label class="form-check-label" for="remind-me">Ține-mă minte</label>
                             </div>
+                            <input type="hidden" name="register">
                         </form>
+                        <div class="form-group">
+                                <button name="register-button" type="button" class="btn btn-primary py-3 px-5" onclick="OnRegister();">Înregistrare</button>
+                            </div>
+                        <a href="login.php">Ai deja un cont?</a>
                     </div>
                 </div>
             </div>
@@ -65,4 +67,6 @@ include "layout/head.php";
     <?php
     include "layout/end.php";
     ?>
+
+<script src="js/register.js"></script>
 </body>

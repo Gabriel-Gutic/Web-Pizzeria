@@ -5,6 +5,11 @@ include "layout/head.php";
 <body>
     <?php
     include "layout/navbar.php";
+
+    if (Logger::IsLogged())
+    {
+        header("Location:index.php");
+    }
     ?>
 
     <section class="ftco-section contact-section">
@@ -26,7 +31,7 @@ include "layout/head.php";
                             <input name="error" type="text" value="">
                         </form>
                         
-                        <h3>Login</h3>
+                        <h3>Autentificare</h3>
                         <form method="POST" action="user.php" class="contact-form">
                             <div class="form-group">
                                 <input name="email" type="email" class="form-control" placeholder="Email*" required>
@@ -34,10 +39,15 @@ include "layout/head.php";
                             <div class="form-group">
                                 <input name="password" type="password" class="form-control" placeholder="Parola*" required>
                             </div>
+                            <div class="form-check mb-4">
+                                <input name="remind-me" type="checkbox" class="form-check-input" id="remind-me">
+                                <label class="form-check-label" for="remind-me">Ține-mă minte</label>
+                            </div>
                             <div class="form-group">
                                 <input name="login" type="submit" value="Autentificare" class="btn btn-primary py-3 px-5">
                             </div>
                         </form>
+                        <a href="register.php">Nu ai cont? Înregistrează-te acum!</a>
                     </div>
                 </div>
             </div>
