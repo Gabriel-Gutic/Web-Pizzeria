@@ -36,8 +36,6 @@ class Logger
         $user = $db->Get('user', 'email', $email);
         if ($user != NULL && password_verify($password, $user['password']))
         {
-            echo "It's working!";
-
             Session::SetUser($user);
             return true;
         }
@@ -49,6 +47,7 @@ class Logger
         if (isset($_SESSION['user-lastname']))
         {
             $user = array(
+                'id' => $_SESSION['user-id'],
                 'lastname' => $_SESSION['user-lastname'],
                 'firstname' => $_SESSION['user-firstname'],
                 'email' => $_SESSION['user-email'],

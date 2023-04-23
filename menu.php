@@ -48,7 +48,7 @@ include "layout/head.php";
     				echo	"<h3>".$pizza['name']."</h3>";
     				echo	"<p>".$pizza['ingredients']."</p>";
     				echo	"<p>".$pizza['weight']."g</p>";
-    				echo	"<p class='price'><span>$2.90</span> <a href='add-to-cart.php?pizza=".$pizza['id']."' class='ml-2 btn btn-white btn-outline-white'>Comandă</a></p>";
+    				echo	"<p class='price'><span>".$pizza['price']." lei</span> <a href='add-to-cart.php?pizza=".$pizza['id']."' class='ml-2 btn btn-white btn-outline-white'>Comandă</a></p>";
     				echo "</div>";
 					?>
     			</div>

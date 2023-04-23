@@ -6,6 +6,7 @@ class Session
 {
     public static function SetUser($user)
     {
+        $_SESSION['user-id'] = $user['id'];
         $_SESSION['user-lastname'] = $user['lastname'];
         $_SESSION['user-firstname'] = $user['firstname'];
         $_SESSION['user-email'] = $user['email'];
@@ -28,6 +29,11 @@ class Session
             return $_SESSION[$name];
         }
         return NULL;
+    }
+
+    public static function Exist($name)
+    {
+        return isset($_SESSION[$name]);
     }
 
     public static function ClearArray($arrayName)

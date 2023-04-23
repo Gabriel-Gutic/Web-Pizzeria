@@ -24,6 +24,8 @@ class DataBase
         }
         $sql_command .= ")";
         mysqli_query($this->connection, $sql_command) or die(mysqli_error($this->connection));
+    
+        return mysqli_insert_id($this->connection);
     }
 
     public function Exist($table, $column, $value)
@@ -31,17 +33,52 @@ class DataBase
         return $this->Get($table, $column, $value) != NULL;
     }
 
-    public function Get($table, $column = NULL, $value = NULL)
+    public function Get($table, $column = NULL, $value = NULL, $sort = NULL, $sort_column = NULL)
     {
         if ($column == NULL || $value == NULL)
-            $sql_command = "SELECT * FROM $table;";
+            $sql_command = "SELECT * FROM $table";
         else
-            $sql_command = "SELECT * FROM $table WHERE $column = '$value';";
+            $sql_command = "SELECT * FROM $table WHERE $column = '$value'";
+        
+        if ($sort == "ASC" && $sort_column != NULL)
+        {
+            $sql_command .= " ORDER BY ".$sort_column." ASC";
+        }
+        else if ($sort == "DESC" && $sort_column != NULL)
+        {
+            $sql_command .= " ORDER BY ".$sort_column." DESC";
+        }
+
         $result = mysqli_query($this->connection, $sql_command) or die(mysqli_error($this->connection));
         if ($result->num_rows == 0)
             return NULL;
         if ($result->num_rows == 1)
             return mysqli_fetch_assoc($result);
+        $arr = array();
+        while ($el = mysqli_fetch_assoc($result))
+            array_push($arr, $el);
+        return $arr;
+    }
+
+    public function GetArray($table, $column = NULL, $value = NULL, $sort = NULL, $sort_column = NULL)
+    {
+        if ($column == NULL || $value == NULL)
+            $sql_command = "SELECT * FROM $table";
+        else
+            $sql_command = "SELECT * FROM $table WHERE $column = '$value'";
+        
+        if ($sort == "ASC" && $sort_column != NULL)
+        {
+            $sql_command .= " ORDER BY ".$sort_column." ASC";
+        }
+        else if ($sort == "DESC" && $sort_column != NULL)
+        {
+            $sql_command .= " ORDER BY ".$sort_column." DESC";
+        }
+
+        $result = mysqli_query($this->connection, $sql_command) or die(mysqli_error($this->connection));
+        if ($result->num_rows == 0)
+            return NULL;
         $arr = array();
         while ($el = mysqli_fetch_assoc($result))
             array_push($arr, $el);

@@ -15,298 +15,52 @@ include "layout/navbar.php"
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
             	<span class="subheading">Bun venit</span>
-              <h1 class="mb-4">Încercați gustul unic românesc!</h1>
-              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Comandă acum</a> <a href="menu.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Vezi meniul</a></p>
-            </div>
+              	<h1 class="mb-4">Încercați gustul unic românesc!</h1>
+              	<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Comandă acum</a></p>
+			</div>
 
           </div>
         </div>
       </div>
     </section>
 
-    <section class="ftco-intro">
+	<section class="ftco-section">
     	<div class="container-wrap">
-    		<div class="wrap d-md-flex">
-	    		<div class="info">
-	    			<div class="row no-gutters">
-	    				<div class="col-md-4 d-flex ftco-animate">
-	    					<div class="icon"><span class="icon-phone"></span></div>
-	    					<div class="text">
-	    						<h3>000 (123) 456 7890</h3>
-	    						<p>A small river named Duden flows</p>
-	    					</div>
-	    				</div>
-	    				<div class="col-md-4 d-flex ftco-animate">
-	    					<div class="icon"><span class="icon-my_location"></span></div>
-	    					<div class="text">
-	    						<h3>198 West 21th Street</h3>
-	    						<p>Suite 721 New York NY 10016</p>
-	    					</div>
-	    				</div>
-	    				<div class="col-md-4 d-flex ftco-animate">
-	    					<div class="icon"><span class="icon-clock-o"></span></div>
-	    					<div class="text">
-	    						<h3>Open Monday-Friday</h3>
-	    						<p>8:00am - 9:00pm</p>
-	    					</div>
-	    				</div>
-	    			</div>
-	    		</div>
-	    		<div class="social d-md-flex pl-md-5 p-4 align-items-center">
-	    			<ul class="social-icon">
-              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-            </ul>
-	    		</div>
-    		</div>
-    	</div>
-    </section>
-
-    <section class="ftco-about d-md-flex">
-    	<div class="one-half img" style="background-image: url(images/about.jpg);"></div>
-    	<div class="one-half ftco-animate">
-        <div class="heading-section ftco-animate ">
-          <h2 class="mb-4">Welcome to <span class="flaticon-pizza">Pizza</span> A Restaurant</h2>
-        </div>
-        <div>
-  				<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-  			</div>
-    	</div>
-    </section>
-
-    <section class="ftco-section ftco-services">
-    	<div class="overlay"></div>
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Our Services</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-    		<div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-5">
-              	<span class="flaticon-diet"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Healthy Foods</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-5">
-              	<span class="flaticon-bicycle"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Fastest Delivery</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-5"><span class="flaticon-pizza-1"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Original Recipes</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>    
-          </div>
-        </div>
-    	</div>
-    </section>
+			<?php
+			include "audio.php";
+			?>
+		</div>
+	</section>
 
     <section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Hot Pizza Meals</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-    	</div>
-    	<div class="container-wrap">
-    		<div class="row no-gutters d-flex">
-    			<div class="col-lg-4 d-flex ftco-animate">
-    				<div class="services-wrap d-flex">
-    					<a href="#" class="img" style="background-image: url(images/pizza-1.jpg);"></a>
-    					<div class="text p-4">
-    						<h3>Italian Pizza</h3>
-    						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
-    						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-lg-4 d-flex ftco-animate">
-    				<div class="services-wrap d-flex">
-    					<a href="#" class="img" style="background-image: url(images/pizza-2.jpg);"></a>
-    					<div class="text p-4">
-    						<h3>Greek Pizza</h3>
-    						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-    						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-lg-4 d-flex ftco-animate">
-    				<div class="services-wrap d-flex">
-    					<a href="#" class="img" style="background-image: url(images/pizza-3.jpg);"></a>
-    					<div class="text p-4">
-    						<h3>Caucasian Pizza</h3>
-    						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-    						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-    					</div>
-    				</div>
-    			</div>
+    <div class="container-wrap">
+    	<div class="row no-gutters d-flex">
+			<?php
 
-    			<div class="col-lg-4 d-flex ftco-animate">
-    				<div class="services-wrap d-flex">
-    					<a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-    					<div class="text p-4">
-    						<h3>American Pizza</h3>
-    						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
-    						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-lg-4 d-flex ftco-animate">
-    				<div class="services-wrap d-flex">
-    					<a href="#" class="img order-lg-last" style="background-image: url(images/pizza-5.jpg);"></a>
-    					<div class="text p-4">
-    						<h3>Tomatoe Pie</h3>
-    						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-    						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-lg-4 d-flex ftco-animate">
-    				<div class="services-wrap d-flex">
-    					<a href="#" class="img order-lg-last" style="background-image: url(images/pizza-6.jpg);"></a>
-    					<div class="text p-4">
-    						<h3>Margherita</h3>
-    						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-    						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-    					</div>
-    				</div>
+			$arr = $db->Get("pizza");
+			foreach ($arr as $pizza)
+			{
+			?>
+
+    		<div class="col-lg-4 d-flex ftco-animate">
+    			<div class="services-wrap d-flex">
+					<?php
+    				echo "<a href='add-to-cart.php?pizza=".$pizza['id']."' class='img' style='background-image: url(".$pizza['image'].");'></a>";
+    				echo "<div class='text p-4'>";
+    				echo	"<h3>".$pizza['name']."</h3>";
+    				echo	"<p>".$pizza['ingredients']."</p>";
+    				echo	"<p>".$pizza['weight']."g</p>";
+    				echo	"<p class='price'><span>".$pizza['price']." lei</span> <a href='add-to-cart.php?pizza=".$pizza['id']."' class='ml-2 btn btn-white btn-outline-white'>Comandă</a></p>";
+    				echo "</div>";
+					?>
     			</div>
     		</div>
-    	</div>
 
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h2 class="mb-4">Our Menu Pricing</h2>
-            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
-            <p class="mt-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-6">
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/pizza-1.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-flex text align-items-center">
-	        				<h3><span>Italian Pizza</span></h3>
-	        				<span class="price">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
-	        			</div>
-        			</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/pizza-2.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-flex text align-items-center">
-	        				<h3><span>Hawaiian Pizza</span></h3>
-	        				<span class="price">$29.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/pizza-3.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-flex text align-items-center">
-	        				<h3><span>Greek Pizza</span></h3>
-	        				<span class="price">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/pizza-4.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-flex text align-items-center">
-	        				<h3><span>Bacon Crispy Thins</span></h3>
-	        				<span class="price">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
-	        			</div>
-	        		</div>
-        		</div>
-        	</div>
-
-        	<div class="col-md-6">
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/pizza-5.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-flex text align-items-center">
-	        				<h3><span>Hawaiian Special</span></h3>
-	        				<span class="price">$49.91</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/pizza-6.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-flex text align-items-center">
-	        				<h3><span>Ultimate Overload</span></h3>
-	        				<span class="price">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/pizza-7.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-flex text align-items-center">
-	        				<h3><span>Bacon Pizza</span></h3>
-	        				<span class="price">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/pizza-8.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-flex text align-items-center">
-	        				<h3><span>Ham &amp; Pineapple</span></h3>
-	        				<span class="price">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
-	        			</div>
-	        		</div>
-        		</div>
-        	</div>
-        </div>
+			<?php
+			}
+			?>
     	</div>
+    </div>
     </section>
     <?php
     include "layout/end.php";

@@ -16,7 +16,6 @@ Logger::LoadIfNotLogged();
 	            <li class="nav-item"><a href="index.php" class="nav-link">Acasă</a></li>
 	            <li class="nav-item"><a href="menu.php" class="nav-link">Meniu</a></li>
 	            <li class="nav-item"><a href="about.php" class="nav-link">Despre</a></li>
-	            <li class="nav-item"><a href="contact.php" class="nav-link">Contactați-ne</a></li>
 	            <?php
 				
 				if (!Logger::IsLogged())
