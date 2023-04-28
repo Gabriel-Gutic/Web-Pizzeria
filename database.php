@@ -84,6 +84,43 @@ class DataBase
             array_push($arr, $el);
         return $arr;
     }
+
+    function Delete($table, $id)
+    {
+        $obj = $this->Get($table, "id", $id);
+
+        if ($obj != NULL)
+        {
+            if (array_key_exists("image", $obj))
+            {
+                unlink($obj['image']);
+            }
+
+            $sql_command = "DELETE FROM $table WHERE id='$id'";
+            mysqli_query($this->connection, $sql_command) or die(mysqli_error($this->connection));
+        }
+    }
+
+    function Update($table, $id, $columns, $values, $image = NULL)
+    {
+        $item = $this->Get($table, "id", $id);
+        if ($item == NULL)
+            return;
+
+        $sql_command = "UPDATE $table SET ";
+        for ($i = 0; $i < count($columns); $i++)
+        {
+            if ($i != 0)
+                $sql_command .= ', ';
+            $sql_command .= $columns[$i] . "='" . $values[$i] . "'";
+        }
+
+        $sql_command .= "WHERE id='$id'";
+
+        mysqli_query($this->connection, $sql_command) or die(mysqli_error($this->connection));
+        if (array_key_exists('image', $item))
+            move_uploaded_file($image, $item['image']);
+    }
 }
 
 ?>

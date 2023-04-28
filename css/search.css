@@ -1,0 +1,11 @@
+.visible-card
+{
+    display: block !important;
+    visibility: visible !important;
+}
+
+.hidden-card
+{
+    display: none !important;
+    visibility: hidden !important;
+}

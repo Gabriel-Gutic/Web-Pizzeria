@@ -31,9 +31,9 @@ function OnRegister()
         {
             SetAlert("Parolele nu coincid!");
         }
+        else if (document.getElementById("register").value != document.getElementById("captcha").value)
+            SetAlert("Captcha incorect!");
         else
-        {
             document.getElementById("register-form").submit();
-        }
     }
 }

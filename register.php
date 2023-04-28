@@ -52,11 +52,18 @@ include "layout/head.php";
                                 <input name="remind-me" type="checkbox" class="form-check-input" id="remind-me">
                                 <label class="form-check-label" for="remind-me">Ține-mă minte</label>
                             </div>
-                            <input type="hidden" name="register">
+                            <div class="form-group">
+                                <?php
+                                    $a = rand(1, 10);
+                                    $b = rand(1, 10);
+                                    ?>
+                                <input type="hidden" id="register" name="register" value="<?php echo $a + $b; ?>">
+	                            <input name="captcha" id="captcha" type="text" class="form-control" placeholder="Captcha: Cât face suma <?php echo $a." + ".$b ?>?*" required>
+	                        </div>
                         </form>
                         <div class="form-group">
-                                <button name="register-button" type="button" class="btn btn-primary py-3 px-5" onclick="OnRegister();">Înregistrare</button>
-                            </div>
+                            <button name="register-button" type="button" class="btn btn-primary py-3 px-5" onclick="OnRegister();">Înregistrare</button>
+                        </div>
                         <a href="login.php">Ai deja un cont?</a>
                     </div>
                 </div>
